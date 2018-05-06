@@ -20,6 +20,7 @@ class DispatchedEmailsController < ApplicationController
     @dispatched_email = DispatchedEmail.new(dispatched_email_params)
     if @dispatched_email.save
       flash[:success] = "Success!"
+      # DispatchedEmailMailer.inquire_confirmation.deliver_now
       redirect_to root_path
     else
       flash[:danger] = "Please Try Again!"

@@ -1,36 +1,50 @@
 <div class="container">
-  <div class="form-container">
-    <%= form_for( DispatchedEmail.new ) do |f| %>
+  <div class="col-xs-12 col-md-6 col-md-offset-3 form-container">
+    <%= form_for @dispatched_email do |f| %>
 
-      <div class="sender-name-container">
-        <%= f.text_field :sender_first_name, placeholder: "First Name",
-          style: " border-radius: 6px; height: 26px; width: 50%;" %>
-        <%= f.text_field :sender_last_name, placeholder: "Last Name",
-          style: " border-radius: 6px; height: 26px; width: 50%;"%>
+      <div>
+        <%= f.text_field :sender_first_name,
+          placeholder: "First Name",
+          class: "sender-first form-control",
+          style: "height: 26px; width: 50%;" %>
+        <%= f.text_field :sender_last_name,
+          placeholder: "Last Name",
+          class: 'sender-last form-control',
+          style: "height: 26px; width: 50%;"%>
       </div>
 
-      <div class="sender-email-container">
-        <%= f.email_field :sender_email, placeholder: "Email Address",
-          style: " border-radius: 6px; height: 26px; width: 100%;"%>
+      <div>
+        <%= f.email_field :sender_email,
+          placeholder: "Email Address",
+          class: "sender-email form-control",
+          style: "border-radius: 6px; height: 26px; width: 100%;"%>
       </div>
 
-      <div class="sender-phone-container">
-        <%= f.telephone_field :sender_phone_number, placeholder: "Contact Number",
-          style: " border-radius: 6px; height: 26px; width: 100%;"%>
+      <div>
+        <%= f.telephone_field :sender_phone_number,
+          placeholder: "Contact Number",
+          class: "sender-phone form-control",
+          style: "height: 26px; width: 100%;"%>
       </div>
 
-      <div class="sender-budget-container">
-        <%= f.text_field :sender_budget, placeholder: "Project Budget", prepend: "$", append: ".00",
-          style: " border-radius: 6px; height: 26px; width: 100%;"%>
+      <div>
+        <%= f.text_field :sender_budget,
+          placeholder: "Project Budget",
+          class: "sender-budget form-control",
+          prepend: "$", append: ".00",
+          style: "height: 26px; width: 100%;"%>
       </div>
 
-      <div class="sender-outline-container">
-        <%= f.text_area :sender_body, placeholder: "Project Outline",
-          style: " border-radius: 6px; height: 26px; width: 500px; height: 150px;"%>
+      <div>
+        <%= f.text_area :sender_body,
+          placeholder: "Project Outline",
+          class: "sender-outline form-control",
+          style: "height: 26px; max-width: 500px; height: 150px;"%>
       </div>
 
-      <div class="sender-submit-container">
-        <%= f.submit "Submit", class: "btn btn-primary" %>
+      <div>
+        <%= f.submit "Submit",
+            class: "submit-buttom btn btn-primary" %>
       </div>
     <% end %>
   </div>
