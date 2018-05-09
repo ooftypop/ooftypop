@@ -1,27 +1,25 @@
 class DispatchedEmailsController < ApplicationController
+  before_action :set_dispatched_email, except: [:index]
 
   def index
-    @dispatched_emails = DispatchedEmails.all
+    @dispatched_emails = DispatchedEmail.all
   end
 
   def show
-    @dispatched_email = DispatchedEmail.find(params[:id])
   end
 
   def new
-    @dispatched_email = DispatchedEmail.new
   end
 
   def edit
-    @dispatched_email = DispatchedEmail.find(params[:id])
   end
 
   def create
-    @dispatched_email = DispatchedEmail.new(dispatched_email_params)
+    @dispatched_email.assign_attributes(dispatched_email_params)
     if @dispatched_email.save
       flash[:success] = "Success!"
-      # DispatchedEmailMailer.inquire_confirmation.deliver_now
-      redirect_to root_path
+      DispatchedEmailMailer.inquire_confirmation(@dispatched_email).deliver_now
+      # redirect_to root_path
     else
       flash[:danger] = "Please Try Again!"
       render "home#index"
@@ -29,6 +27,8 @@ class DispatchedEmailsController < ApplicationController
   end
 
   def update
+    DispatchedEmailMailer.inquire_confirmation(@dispatched_email).deliver_now
+    redirect_to root_path
   end
 
   def destroy
@@ -36,11 +36,15 @@ class DispatchedEmailsController < ApplicationController
 
   private
 
+  def set_dispatched_email
+    @dispatched_email = params[:id].present? ? DispatchedEmail.find(params[:id]) : DispatchedEmail.new
+  end
+
   def dispatched_email_params
     params.require(:dispatched_email).permit(
       :id,
-      :sender_body,
-      :sender_budget,
+      :body,
+      :budget,
       :sender_email,
       :sender_first_name,
       :sender_last_name,
