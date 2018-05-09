@@ -3,19 +3,8 @@
     <div>
       WORK CONTAINER
     </div>
-    <div id="contact">
-      <p id="sent-feedback", style="margin-right: 70px; Color: white; text-align: center;"></p>
+    <div class="inquiry-container" id="contact">
       <%= render partial: "dispatched_emails/form"%>
     </div>
   </div>
 </div>
-
-
-
-<script>
-
-  $("form").submit(function() {
-    document.getElementById("sent-feedback").innerHTML = "Form Submitted!"
-  });
-
-</script>

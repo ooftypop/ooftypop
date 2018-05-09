@@ -17,11 +17,9 @@ class DispatchedEmailsController < ApplicationController
   def create
     @dispatched_email.assign_attributes(dispatched_email_params)
     if @dispatched_email.save
-      flash[:success] = "Success!"
       DispatchedEmailMailer.inquire_confirmation(@dispatched_email).deliver_now
-      # redirect_to root_path
+      render "inquiry_received.js"
     else
-      flash[:danger] = "Please Try Again!"
       render "home#index"
     end
   end
