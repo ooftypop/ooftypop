@@ -1,15 +1,22 @@
 .form-container {
-  height: auto;
-  max-width: 500px;
   position: relative;
-  text-align: center;
   .sender-first, .sender-last {
     text-align: center;
     display: inline;
     float: left;
   }
 }
+.submit-buttom {
+  text-align: center;
+  .submit-clicker {
+    background-color: white;
+    border-radius: 0;
+    color: black;
+  }
+}
 .form-control:nth-child(-n+2) {
+  border-radius: 0;
+  height: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
 }

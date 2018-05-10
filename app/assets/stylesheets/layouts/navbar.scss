@@ -1,12 +1,21 @@
 .navbar {
-  // // background: #f7f7f9;
-  // height: 50px;
-  // width: 100%;
-  h2 {
-    // float: left;
+  background-color: #f7f7f9;
+  font-family: Playfair display, serif;
+  width: 100%;
+  .navbar-brand {
+    color: black;
+    font-weight: bold;
+    padding-bottom: 5px;
   }
-  .nav-item {
-    display: inline-block;
-    // float: left;
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    .nav-item{
+      float: left;
+      .nav-link {
+        color: grey;
+      }
+    }
   }
 }
