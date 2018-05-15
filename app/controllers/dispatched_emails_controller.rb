@@ -48,6 +48,4 @@ class DispatchedEmailsController < ApplicationController
       :sender_last_name,
       :sender_phone_number)
   end
-
-
 end

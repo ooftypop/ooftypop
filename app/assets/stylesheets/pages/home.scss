@@ -1,6 +1,13 @@
 .home-page {
+  padding: 0 !important;
   .row-banner {
-    // height: auto;
+    padding: 0;
+    .image-drop {
+    }
+    img {
+      padding: 0px 0px 120px 0px;
+      width: 100%;
+    }
   }
   .services-container {
     background-color: black;
@@ -62,5 +69,14 @@
         font-weight: bold;
       }
     }
+  }
+}
+
+.inquiry-received {
+  height: 464px;
+  .thank-you-text {
+    color: white;
+    width: 50%;
+    text-align: center;
   }
 }

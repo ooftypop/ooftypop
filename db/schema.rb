@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180508235548) do
+ActiveRecord::Schema.define(version: 20180515140833) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,12 @@ ActiveRecord::Schema.define(version: 20180508235548) do
     t.string  "sender_first_name"
     t.string  "sender_last_name"
     t.string  "sender_phone_number"
+  end
+
+  create_table "portfolio_items", force: :cascade do |t|
+    t.text   "description"
+    t.string "title"
+    t.string "url"
   end
 
   create_table "roles", force: :cascade do |t|
