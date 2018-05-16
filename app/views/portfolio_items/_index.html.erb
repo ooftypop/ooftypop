@@ -1,0 +1,17 @@
+<div>
+  <div class="card-index">
+    <% if @portfolio_item.any? %>
+      <% @portfolio_item.each do |portfolio_item| %>
+        <div class='portfolio-item-container card'>
+          <img class="card-img-top" src="/assets/placeholder3.jpg" alt="Card image cap" />
+          <h3 class="card-title"><%= portfolio_item.title %></h3>
+            <p class="card-text"><%= portfolio_item.description %></p>
+            <p class="card-link"><%= link_to "#{portfolio_item.url}", "https://#{portfolio_item.url}", style:"color: black; margin-left: 15px;" %></a></p>
+            <p class="card-text"><small class="technology">Rails • Slim • Sass • Redis • Sidekiq • HTML • CSS • JavaScript • Ruby</small></p>
+        </div>
+      <% end %>
+      <% else %>
+        <h3>Please create Portfolio items</h3>
+    <% end %>
+  </div>
+</div>

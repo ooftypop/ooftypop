@@ -17,7 +17,7 @@ class PortfolioItemsController < ApplicationController
   def create
     @portfolio_item.assign_attributes(portfolio_item_params)
     if @portfolio_item.save
-      *something happens*
+      redirect_to root_path
     else
       render "new"
     end
@@ -40,6 +40,6 @@ class PortfolioItemsController < ApplicationController
       :id,
       :description,
       :title,
-      url:)
+      :url)
   end
 end

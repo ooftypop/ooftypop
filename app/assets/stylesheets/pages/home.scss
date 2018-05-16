@@ -1,23 +1,31 @@
 .home-page {
   padding: 0 !important;
-  .row-banner {
-    padding: 0;
-    .image-drop {
-    }
-    img {
-      padding: 0px 0px 120px 0px;
-      width: 100%;
-    }
+  .banner-container {
+    background-image: url(/assets/canyon-fade.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    margin: 0;
+    // img {
+    //   padding: 0px 0px 120px 0px;
+    //   width: 100%;
+    // }
   }
   .services-container {
     background-color: black;
     padding: 30px;
+    margin: 0px;
     .services {
       background-color: white;
       .service {
         text-align: center;
-        font-weight: bold;
-        margin: 15px 0;
+        margin: 10px 0px;
+        h3 {
+          font-weight: bold;
+        }
+        p {
+          text-align: left;
+        }
       }
     }
   }
@@ -25,32 +33,33 @@
     padding: 30px 15px 18px 15px;
     .card-columns {
       column-count: 3;
-      font-family: Playfair display;
       .card {
-        border: 1px solid black;
+        .card-title {
+          margin-bottom: .75rem;
+          margin-left: 15px;
+        }
+        border: 1px solid #e5e5e5;
         display: inline-block;
         margin-bottom: .75rem;
         position: relative;
         width: 100%;
         .card-img-top {
-          border-radius: 0;
+          border: 0;
           width: 100%;
           img {
             vertical-align: middle;
           }
         }
-        .card-block {
+        .card-text {
           padding: 15px;
-          .card-title {
-            margin-bottom: .75rem;
-          }
         }
       }
     }
   }
   .contact-form {
-    padding: 30px 15px 30px 15px;
     background-color: black;
+    margin: 0;
+    padding: 30px 15px 30px 15px;
     .copyright {
       color: white;
       display: block;
