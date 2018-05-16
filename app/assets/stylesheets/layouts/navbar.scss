@@ -1,0 +1,26 @@
+.navbar {
+  background-color: #f7f7f9;
+  font-family: Playfair display, serif;
+  width: 100%;
+  .navbar-brand {
+    color: black;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  .portfolio-link {
+    color: grey;
+    float: right;
+    margin: 15px 0px 0px 0px;
+  }
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    .nav-item{
+      float: left;
+      .nav-link {
+        color: grey;
+      }
+    }
+  }
+}

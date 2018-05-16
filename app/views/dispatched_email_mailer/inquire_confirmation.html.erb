@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="container", style="margin: 20px;">
+    Hello, <%= @dispatched_email.sender_first_name %>
+    <p>Please review your inquisition, if you're happy, then nothing else</p>
+    <p>needs to be done and one of our representatives will get back to you.</p>
+    <p>Thank you for thinking of Ooftypop!</p>
+  </div>
+
+  <div class="ooftypop-inquisition-container", style="text-align: center;">
+    <div class="name row">
+      <%= @dispatched_email.sender_last_name %>, <%= @dispatched_email.sender_first_name %>
+    </div><br />
+    <div class="phone-number row">
+      Contact number: <%= @dispatched_email.sender_phone_number %>
+    </div><br />
+    <div class="budget row">
+      Project Budget: <%= @dispatched_email.budget %>
+    </div>
+    <p>
+      Project Outline:
+    </p>
+    <div class="body row" style="margin: 0px 50px 50px 50px;">
+      <%= @dispatched_email.body %>
+    </div>
+  </div>
+</div>
