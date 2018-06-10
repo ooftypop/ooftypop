@@ -1,0 +1,40 @@
+<td colspan="6">
+  <div id="userForm">
+    <div class="form-container">
+      <%= form_for object, remote: true do |f| %>
+
+        <div>
+          <%= f.text_field :first_name,
+            placeholder: "First Name",
+            class: "form-control" %>
+        </div>
+
+        <div>
+          <%= f.text_field :middle_name,
+            placeholder: "Middle Name",
+            class: "form-control" %>
+        </div>
+
+        <div>
+          <%= f.text_field :last_name,
+            placeholder: "Last Name",
+            class: "form-control" %>
+        </div>
+
+        <div>
+          <%= f.text_field :email,
+            placeholder: "Email Address",
+            class: "form-control" %>
+        </div>
+
+        <div class="submit-buttom">
+          <%= f.submit "Send",
+              class: "submit-clicker btn btn-primary" %>
+        </div>
+
+        <button class="btn btn-link cancel">Cancel</button>
+
+      <% end %>
+    </div>
+  </div>
+</td>

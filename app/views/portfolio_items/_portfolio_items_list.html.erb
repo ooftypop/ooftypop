@@ -1,0 +1,5 @@
+<td><%= object.title %></td>
+<td><%= truncate(object.description) %></td>
+<td><%= object.url %></td>
+<td class="actions"><%= smart_listing_item_actions [{name: :edit,    url: edit_portfolio_item_path(object)},
+ {name: :destroy, url: portfolio_item_path(object), confirmation: "Are you sure you want to delete this?"}]%> </td>

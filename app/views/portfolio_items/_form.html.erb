@@ -1,31 +1,35 @@
-<!-- <div class="col-xs-12 col-md-6 col-md-offset-3">
-  <div class="form-container">
-    <%= form_for @portfolio_item remote: true do |f| %>
+<td colspan="6">
+  <div id="portfolio_itemForm">
+    <div class="form-container">
+      <%= form_for object, remote: true do |f| %>
 
-      <div>
-        <%= f.text_field :title,
-          placeholder: "Portfolio Title",
-          class: "portfolio_title form-control" %>
-      </div>
+        <div>
+          <%= f.text_field :title,
+            placeholder: "Portfolio Title",
+            class: "portfolio_title form-control" %>
+        </div>
 
-      <div>
-        <%= f.text_area :description,
-          placeholder: "Description",
-          class: "portfolio-description form-control",
-          style: "height: 150px;" %>
-      </div>
+        <div>
+          <%= f.text_area :description,
+            placeholder: "Description",
+            class: "portfolio-description form-control",
+            style: "height: 150px;" %>
+        </div>
 
-      <div>
-        <%= f.text_area :url,
-          placeholder: "Web Address",
-          class: "portfolio-url form-control" %>
-      </div>
+        <div>
+          <%= f.text_area :url,
+            placeholder: "Web Address",
+            class: "portfolio-url form-control" %>
+        </div>
 
-      <div class="submit-buttom">
-        <%= f.submit "Send",
-            class: "submit-clicker btn btn-primary" %>
-      </div>
+        <div class="submit-buttom">
+          <%= f.submit "Send",
+              class: "submit-clicker btn btn-primary" %>
+        </div>
 
-    <% end %>
+        <button class="btn btn-link cancel">Cancel</button>
+
+      <% end %>
+    </div>
   </div>
-</div> -->
+</td>

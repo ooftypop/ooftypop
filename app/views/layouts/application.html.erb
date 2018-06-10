@@ -10,7 +10,8 @@
   </head>
 
   <body style="height: 100%; position: relative; margin-top: 50px; font-family: Playfair display;">
-    <%= render partial: 'layouts/navbar' %>
+    <%= render partial: '/layouts/navbar' %>
+    <%= render "layouts/modal" %>
     <%= yield %>
   </body>
 </html>
