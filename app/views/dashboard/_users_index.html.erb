@@ -10,7 +10,7 @@
       </head>
       <tbody>
         <% smart_listing.collection.each do |user| %>
-          <tr class="editable" data="{id: user.id}">
+          <tr class="editable" data-id="<%= user.id %>">
             <%= smart_listing.render object: user, partial: "users/user_list", locals: {object: user} %>
           </tr>
         <% end %>

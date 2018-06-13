@@ -16,7 +16,7 @@ class PortfolioItemsController < ApplicationController
   end
 
   def edit
-    @portfolio_item = PortfolioItem.find(params[:id])
+     @portfolio_item.snoop
   end
 
   def create

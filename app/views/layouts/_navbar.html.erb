@@ -1,7 +1,9 @@
 <nav class="navbar navbar-fixed-top navbar-light">
+  <a class="navbar-brand" href='#'>Ooftypop</a>
+  <% if @user.present? %>
+
+  <% else %>
   <div class="container">
-    <!-- <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="toggle-navigation"></button> -->
-    <a class="navbar-brand" href="#">Ooftypop</a>
     <ul class="nav navbar-nav">
 
       <li class="nav-item">
@@ -15,6 +17,17 @@
       <li class="nav-item">
         <a class="nav-link" href="#contact">Hire Us</a>
       </li>
+      <li class="nav-item">
+        <div class="dropdown">
+          <div class="btn btn-secondary dropdown-toggle" style="margin-top: 8px;" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sign In
+          </div>
+          <form class="dropdown-menu p-4">
+            <%= render partial: "/users/signin_form" %>
+          </form>
+        </div>
+      </li>
     </ul>
   </div>
+  <% end %>
 </nav>

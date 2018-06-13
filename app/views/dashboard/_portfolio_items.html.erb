@@ -9,7 +9,7 @@
       </head>
       <tbody>
         <% smart_listing.collection.each do |portfolio_item| %>
-          <tr class="editable" data="{id: portfolio_item.id}">
+          <tr class="editable" data-id="<%= portfolio_item.id %>">
             <%= smart_listing.render object: portfolio_item, partial: "portfolio_items/portfolio_items_list", locals: {object: portfolio_item} %>
           </tr>
         <% end %>
