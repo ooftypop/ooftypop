@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%;">
+<html>
   <head>
     <title>Ooftypop</title>
     <%= csrf_meta_tags %>
@@ -9,8 +9,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body style="height: 100%; position: relative; margin-top: 50px; font-family: Playfair display;">
-    <%= render partial: 'layouts/navbar' %>
+  <body>
+    <%= render partial: '/layouts/navbar' %>
+    <%= render "layouts/modal" %>
     <%= yield %>
   </body>
 </html>

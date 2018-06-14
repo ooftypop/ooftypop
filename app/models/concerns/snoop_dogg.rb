@@ -3,6 +3,10 @@ module SnoopDogg
   private
 
   included do
+    def snoop
+      self.puts_attributes
+    end
+    
     def puts_attributes(include_type = false)
       puts "=" * 88,
            "#{self.class.name} #{self.id}",

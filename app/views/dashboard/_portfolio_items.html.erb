@@ -1,0 +1,24 @@
+<div class="portfolio-item-list" style="margin: 15px;">
+  <% unless smart_listing.empty? %>
+    <table class="table table-striped">
+      <head>
+        <th class="col-xs-4"><%= smart_listing.sortable "Title", "title" %></th>
+        <th class="col-xs-4"><%= "Description" %></th>
+        <th class="col-xs-4"><%= smart_listing.sortable "Url", "url" %></th>
+        <th></th>
+      </head>
+      <tbody>
+        <% smart_listing.collection.each do |portfolio_item| %>
+          <tr class="editable" data-id="<%= portfolio_item.id %>">
+            <%= smart_listing.render object: portfolio_item, partial: "portfolio_items/portfolio_items_list", locals: {object: portfolio_item} %>
+          </tr>
+        <% end %>
+        <%= smart_listing.item_new colspan: 6, link: new_portfolio_item_path %>
+      </tbody>
+    </table>
+    <%= smart_listing.paginate %>
+    <%= smart_listing.pagination_per_page_links %>
+  <% else %>
+    <p>No Records found!</p>
+  <% end %>
+</div>

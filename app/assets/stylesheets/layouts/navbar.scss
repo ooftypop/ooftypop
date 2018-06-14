@@ -18,6 +18,12 @@
     padding-left: 0;
     .nav-item{
       float: left;
+      .sign-in {
+        margin-top: 8px;
+        .sign-in-button {
+          color: grey;
+        }
+      }
       .nav-link {
         color: grey;
       }
