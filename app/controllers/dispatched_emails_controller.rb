@@ -44,8 +44,7 @@ class DispatchedEmailsController < ApplicationController
       :body,
       :budget,
       :sender_email,
-      :sender_first_name,
-      :sender_last_name,
+      :sender_name,
       :sender_phone_number)
   end
 end
