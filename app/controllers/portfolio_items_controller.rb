@@ -43,8 +43,8 @@ class PortfolioItemsController < ApplicationController
 
   def portfolio_item_params
     params.require(:portfolio_item).permit(
+      :description
       :id,
-      :description,
       :title,
       :url)
   end

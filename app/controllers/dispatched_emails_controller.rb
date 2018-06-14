@@ -40,9 +40,9 @@ class DispatchedEmailsController < ApplicationController
 
   def dispatched_email_params
     params.require(:dispatched_email).permit(
-      :id,
       :body,
       :budget,
+      :id,
       :sender_email,
       :sender_first_name,
       :sender_last_name,
