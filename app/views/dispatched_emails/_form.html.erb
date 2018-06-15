@@ -3,14 +3,9 @@
     <%= form_for @dispatched_email, remote: true do |f| %>
 
       <div>
-        <%= f.text_field :sender_first_name,
-          placeholder: "First Name",
-          class: "sender-first form-control",
-          style: "width: 50%;" %>
-        <%= f.text_field :sender_last_name,
-          placeholder: "Last Name",
-          class: 'sender-last form-control',
-          style: "width: 50%;" %>
+        <%= f.text_field :sender_name,
+          placeholder: "Name",
+          class: "sender-name form-control" %>
       </div>
 
       <div>
