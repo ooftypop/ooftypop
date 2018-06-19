@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   def create
     @user.assign_attributes(user_params)
-    if @user.save
+    if @user.save!
       redirect_to root_path
     else
       render "new"
