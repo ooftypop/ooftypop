@@ -1,3 +1,6 @@
+
+////////////////////////////////////////////////////////////////////INQUIRE FORM
+
 .form-container {
   position: relative;
   .sender-first, .sender-last {
@@ -19,4 +22,29 @@
   height: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+
+//////////////////////////////////////////////////////////////////////LOGIN FORM
+.background-container {
+  text-align: center;
+  .signin-container {
+    border: solid black 3px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    .signin-form {
+      .signin-fields {
+        #sessions-email, #sessions-password, #sessions-submit {
+          width: 300px;
+        }
+        #sessions-submit {
+          font-weight: bold;
+          height: 28px;
+        }
+      }
+    }
+  }
 }
