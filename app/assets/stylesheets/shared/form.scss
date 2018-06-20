@@ -29,20 +29,20 @@
 .background-container {
   text-align: center;
   .signin-container {
-    width: 500px;
+    border: solid black 3px;
     margin: 0 auto;
     margin-top: 20px;
     padding: 20px;
-    border: solid black 3px;
     text-align: center;
+    width: 500px;
     .signin-form {
       .signin-fields {
         #sessions-email, #sessions-password, #sessions-submit {
           width: 300px;
         }
         #sessions-submit {
-          height: 28px;
           font-weight: bold;
+          height: 28px;
         }
       }
     }
