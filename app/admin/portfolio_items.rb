@@ -1,15 +1,24 @@
 ActiveAdmin.register PortfolioItem do
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
 permit_params :description, :title, :url
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+
+  form do |f|
+    f.inputs do
+      f.input :title
+      f.input :description
+      f.input :url
+    end
+    f.actions
+  end
+
+  index do
+    selectable_column
+    id_column
+    column :title
+    column :description
+    column :url
+    # column :created_at
+    # column :updated_at
+    actions
+  end
 
 end

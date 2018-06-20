@@ -1,15 +1,25 @@
 ActiveAdmin.register DispatchedEmail do
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+permit_params :body, :budget, :sender_email, :sender_name, :sender_phone_number
 
+  form do |f|
+    f.inputs do
+      f.input :sender_name
+      f.input :sender_phone_number
+      f.input :sender_email
+      f.input :body
+      f.input :budget
+    end
+    f.actions
+  end
+
+  index do
+    selectable_column
+    id_column
+    column :sender_name
+    column :sender_email
+    column :body
+    column :budget
+    column :sender_phone_number
+    actions
+  end
 end

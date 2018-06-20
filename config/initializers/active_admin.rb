@@ -1,15 +1,9 @@
 ActiveAdmin.setup do |config|
-  # == Site Title
-  #
-  # Set the title that is displayed on the main layout
-  # for each of the active admin pages.
-  #
-  config.site_title = "Ooftypop"
 
+  config.site_title = "Ooftypop"
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
-  #
-  # config.site_title_link = "/"
+  # config.site_title_link = "home/index"
 
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
@@ -215,12 +209,12 @@ ActiveAdmin.setup do |config|
   #
   # To change the default utility navigation to show a link to your website & a logout btn
   #
-  #   config.namespace :admin do |admin|
-  #     admin.build_menu :utility_navigation do |menu|
-  #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
-  #       admin.add_logout_button_to_menu menu
-  #     end
-  #   end
+  config.namespace :admin do |admin|
+    admin.build_menu :utility_navigation do |menu|
+      menu.add label: "Home", url: "http://www.ooftypop.com", html_options: { target: :blank }
+      admin.add_logout_button_to_menu menu
+    end
+  end
   #
   # If you wanted to add a static menu item to the default menu provided:
   #
@@ -282,7 +276,7 @@ ActiveAdmin.setup do |config|
   # By default, the footer shows the current Active Admin version. You can
   # override the content of the footer here.
   #
-  # config.footer = 'my custom footer text'
+  config.footer = 'Ooftypop'
 
   # == Sorting
   #
