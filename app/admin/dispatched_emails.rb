@@ -1,5 +1,5 @@
 ActiveAdmin.register DispatchedEmail do
-permit_params :sender_email, :sender_phone_number, :body, :budget, :sender_name
+permit_params :body, :budget, :sender_email, :sender_name, :sender_phone_number
 
   form do |f|
     f.inputs do
