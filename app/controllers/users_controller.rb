@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-  include SmartListing::Helper::ControllerExtensions
-  helper  SmartListing::Helper
-  include SmartListingConcern
 
   before_action :set_user, except: [:index]
 
