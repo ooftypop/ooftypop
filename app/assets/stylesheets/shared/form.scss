@@ -55,10 +55,32 @@
     width: 500px;
     .edit-user-form {
       .edit-fields {
-        #edit-user-email, #edit-user-password, #edit-user-password, #edit-user-new-password, #user-edit-submit {
+        #edit-user-email, #user-edit-submit {
           width: 300px;
         }
         #user-edit-submit {
+          font-weight: bold;
+          height: 28px;
+        }
+      }
+    }
+  }
+}
+/////////////////////////////////////////////////////////////////CHANGE PASSWORD
+.background-container {
+  .new-password-container {
+    border: solid black 3px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    .new-password-form {
+      .new-password {
+        #new-password-field, #submit-new-password {
+          width: 300px;
+        }
+        #submit-new-password {
           font-weight: bold;
           height: 28px;
         }

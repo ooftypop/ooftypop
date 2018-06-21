@@ -1,3 +1,4 @@
+//////////////////////////////////////////////////////////////////////////NAVBAR
 .navbar {
   background-color: #f7f7f9;
   font-family: Playfair display, serif;
@@ -31,5 +32,25 @@
         color: grey;
       }
     }
+  }
+}
+////////////////////////////////////////////////////////////////PROFILE DROPDOWN
+.profile-dropdown {
+  background-color: #f7f7f9;
+  float: right;
+  margin-top: 6px;
+  button {
+    background-color: #f7f7f9;
+    color: grey;
+    a {
+      font-size: 24px;
+      text-decoration: none;
+    }
+  }
+  .fa {
+    color: grey;
+  }
+  .dropdown-menu {
+    text-align: center;
   }
 }
