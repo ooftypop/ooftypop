@@ -38,7 +38,12 @@ class UsersController < ApplicationController
   end
 
   def update
-     @user.update_attributes(user_params)
+    if @user.update_attributes(user_params)
+      redirect_to dashboard_index_path
+    else
+      render "edit"
+      flash[:danger] = "nope not yet"
+    end
   end
 
   def destroy
