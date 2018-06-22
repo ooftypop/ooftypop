@@ -33,3 +33,32 @@
     }
   }
 }
+///////////////////////////////////////////////////////////////////////////MEDIA
+@media (max-width: 766px) {
+  .navbar {
+    .navbar-nav {
+      .nav-item {
+        .sign-in {
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+// @media (max-width: 418px) {
+//   .navbar {
+//     padding-top: 10px;
+//     .navbar-brand {
+//       float: none;
+//       width: 100%;
+//     }
+//     text-align: center;
+//     .navbar-nav {
+//       clear: both;
+//       .nav-item {
+//         float: none;
+//         width: 100%;
+//       }
+//     }
+//   }
+// }

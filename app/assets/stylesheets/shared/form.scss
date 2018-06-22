@@ -66,3 +66,25 @@
     }
   }
 }
+/////////////////////////////////////////////////////////////////////LOGIN MEDIA
+@media (max-width: 520px) {
+  .background-container {
+    margin: 20px;
+    .signin-container {
+      width: 100%;
+      .signin-form {
+        .signin-fields {
+          #sessions-email, #sessions-password, #sessions-submit {
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+          }
+          #sessions-submit {
+            font-weight: bold;
+            height: 28px;
+          }
+        }
+      }
+    }
+  }
+}
