@@ -1,12 +1,11 @@
 class User < ApplicationRecord
+  include SnoopDogg
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, 
-         :recoverable, :rememberable, :trackable, :validatable
-  include SnoopDogg
+  devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
 
   rolify
-  devise :database_authenticatable, 
+  devise :database_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :email, :password, presence: true
