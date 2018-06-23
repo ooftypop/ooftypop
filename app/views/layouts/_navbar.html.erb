@@ -35,8 +35,17 @@
         <li>
           <%= link_to 'Home'.html_safe, root_path, class: "home-link" %>
         </li>
+        <li>
+          <%= link_to 'Edit Profile', edit_user_registration_path, class: "edit-link" %>
+        </li>
       </ul>
     </div>
     <% end %>
   </nav>
 </div>
+
+<script>
+  var mobile = document.createElement('div');
+  mobile.className = 'nav-mobile';
+  document.querySelector('.nav').appendChild(mobile);
+</script>

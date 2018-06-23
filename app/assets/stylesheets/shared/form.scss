@@ -1,6 +1,4 @@
-
 ////////////////////////////////////////////////////////////////////INQUIRE FORM
-
 .form-container {
   position: relative;
   .sender-first, .sender-last {
@@ -23,8 +21,6 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-
 //////////////////////////////////////////////////////////////////////LOGIN FORM
 .background-container {
   text-align: center;
@@ -43,6 +39,50 @@
         #sessions-submit {
           font-weight: bold;
           height: 28px;
+        }
+      }
+    }
+  }
+}
+//////////////////////////////////////////////////////////////////EDIT USER FORM
+.background-container {
+  .user-edit-container {
+    border: solid black 3px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    .edit-user-form {
+      .edit-fields {
+        #edit-user-email, #edit-user-password, #edit-user-password, #edit-user-new-password, #user-edit-submit {
+          width: 300px;
+        }
+        #user-edit-submit {
+          font-weight: bold;
+          height: 28px;
+        }
+      }
+    }
+  }
+}
+/////////////////////////////////////////////////////////////////////LOGIN MEDIA
+@media (max-width: 520px) {
+  .background-container {
+    margin: 20px;
+    .signin-container {
+      width: 100%;
+      .signin-form {
+        .signin-fields {
+          #sessions-email, #sessions-password, #sessions-submit {
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+          }
+          #sessions-submit {
+            font-weight: bold;
+            height: 28px;
+          }
         }
       }
     }
