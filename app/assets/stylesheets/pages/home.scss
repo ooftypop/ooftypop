@@ -89,3 +89,22 @@
     margin-top: 200px;
   }
 }
+///////////////////////////////////////////////////////////////////////////MEDIA
+@media (max-width: 766px) {
+  .home-page {
+    .works-container {
+      .card-columns {
+        column-count: 2;
+      }
+    }
+  }
+}
+@media (max-width: 530px) {
+  .home-page {
+    .works-container {
+      .card-columns {
+        column-count: 1;
+      }
+    }
+  }
+}
