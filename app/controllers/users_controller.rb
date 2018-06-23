@@ -17,16 +17,24 @@ class UsersController < ApplicationController
   def edit
   end
 
-  # def update_password
-  #   @user = current_user
-  #   if @user.update(user_params)
-  #     # Sign in the user by passing validation in case their password changed
-  #     bypass_sign_in(@user)
-  #     redirect_to root_path
-  #   else
-  #     render "edit"
-  #   end
-  # end
+  def update_password
+    @user = current_user
+    if @user.update(user_params)
+      # Sign in the user by passing validation in case their password changed
+      bypass_sign_in(@user)
+      redirect_to dashboard_index_path
+    else
+      render "edit"
+    end
+  end
+
+  def update
+    if @user.update(user_params)
+      redirect_to dashboard_index_path
+    else
+      render "edit"
+    end
+  end
 
   def create
     @user.assign_attributes(user_params)
@@ -34,15 +42,6 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       render "new"
-    end
-  end
-
-  def update
-    if @user.update_attributes(user_params)
-      redirect_to dashboard_index_path
-    else
-      render "edit"
-      flash[:danger] = "nope not yet"
     end
   end
 
@@ -62,6 +61,7 @@ class UsersController < ApplicationController
       :id,
       :last_name,
       :middle_name,
+      :password_confirmation,
       :password)
   end
 end
