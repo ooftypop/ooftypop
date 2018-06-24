@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = current_user
   end
 
   def update_password
@@ -29,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update(user_params)
+    if @user.update_attributes(user_params)
       redirect_to dashboard_index_path
     else
       render "edit"
@@ -58,10 +59,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(
       :email,
       :first_name,
-      :id,
       :last_name,
-      :middle_name,
-      :password_confirmation,
-      :password)
+      :middle_name)
   end
 end
