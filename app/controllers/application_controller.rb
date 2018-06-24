@@ -5,10 +5,14 @@ class ApplicationController < ActionController::Base
   def access_denied(exception)
     redirect_to root_path, alert: exception.message
   end
-  
+
   protected
 
   def after_sign_in_path_for(resource)
-    dashboard_index_path(resource) || root_path
+    if resource.has_role?(:admin)
+      admin_root_path(resource)
+    else
+      dashboard_index_path
+    end
   end
 end

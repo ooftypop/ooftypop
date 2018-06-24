@@ -1,11 +1,24 @@
 Rails.application.routes.draw do
+  root 'home#index'
 
-  devise_for :admin_users, {class_name: 'User'}.merge(ActiveAdmin::Devise.config)
+  devise_for :users,
+    controllers: {
+      confirmations:      'users/confirmations',
+      # omniauth_callbacks: 'users/omniauth_callbacks',
+      passwords:          'users/passwords',
+      registrations:      'users/registrations',
+      sessions:           'users/sessions',
+      unlocks:            'users/unlocks'
+    }
+
   ActiveAdmin.routes(self)
 
-  root "home#index"
+  resource :user, only: [:edit] do
+    collection do
+      patch 'update_password'
+    end
+  end
 
-  devise_for :users
   resources :users
   resources :dispatched_emails
   resources :portfolio_items

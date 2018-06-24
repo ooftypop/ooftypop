@@ -88,9 +88,6 @@ ActiveAdmin.setup do |config|
   # (within the application controller) to return the currently logged in user.
   config.current_user_method = :current_user
 
-  config.authorization_adapter = ActiveAdminAdapter
-  config.on_unauthorized_access = :access_denied
-
   # == Logging Out
   #
   # Active Admin displays a logout link on each screen. These
