@@ -19,6 +19,8 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/users/update_password', to: 'users#update_password'
+
   resources :users
   resources :dispatched_emails
   resources :portfolio_items

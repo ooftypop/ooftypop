@@ -1,4 +1,5 @@
 class DispatchedEmailsController < ApplicationController
+  
   before_action :set_dispatched_email, except: [:index]
 
   def index
@@ -11,9 +12,6 @@ class DispatchedEmailsController < ApplicationController
   def new
   end
 
-  def edit
-  end
-
   def create
     @dispatched_email.assign_attributes(dispatched_email_params)
     if @dispatched_email.save
@@ -22,6 +20,9 @@ class DispatchedEmailsController < ApplicationController
     else
       render "home#index"
     end
+  end
+
+  def edit
   end
 
   def update
