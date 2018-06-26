@@ -39,6 +39,7 @@
     <div class="col-xs-12">
       <div class="card-columns">
         <%= render partial: 'portfolio_items/showcase' %>
+        <%= will_paginate @portfolio_items, class: 'portfolio-item-container' %>
       </div>
     </div>
   </div>
