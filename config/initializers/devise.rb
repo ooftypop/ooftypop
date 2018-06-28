@@ -111,7 +111,8 @@ Devise.setup do |config|
   # config.pepper = 'df61a1d92b033fce8eef5f743ce893caf2c50cd1ab7d9b9b571bbf1afef82b80c98d33136370b96b8f59819fe5635c08173d4bba9bfe880debad70b9946df69b'
 
   # Send a notification email when the user's password is changed
-  # config.send_password_change_notification = false
+  config.send_password_change_notification = true
+  # You can customize the password change email by editing the devise/mailer/password_change.html.erb template.
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -204,7 +205,7 @@ Devise.setup do |config|
 
   # When set to false, does not sign a user in automatically after their password is
   # reset. Defaults to true, so a user is signed in automatically after a reset.
-  # config.sign_in_after_reset_password = true
+  config.sign_in_after_reset_password = true
 
   # ==> Configuration for :encryptable
   # Allow you to use another hashing or encryption algorithm besides bcrypt (default).

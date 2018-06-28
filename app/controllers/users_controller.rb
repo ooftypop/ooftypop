@@ -37,15 +37,6 @@ class UsersController < ApplicationController
   end
 
   # ============================================================================
-  def update_password
-    if @user.update(user_params)
-      # Sign in the user by passing validation in case their password changed
-      bypass_sign_in(@user)
-      redirect_back fallback_location: root_path
-    else
-      render "edit"
-    end
-  end
 
   private
 
@@ -58,6 +49,8 @@ class UsersController < ApplicationController
       :email,
       :first_name,
       :last_name,
+      :password,
+      :password_confirmation,
       :middle_name)
   end
 end

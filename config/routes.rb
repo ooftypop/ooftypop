@@ -13,17 +13,14 @@ Rails.application.routes.draw do
 
   ActiveAdmin.routes(self)
 
-  resource :user, only: [:edit] do
-    collection do
-      patch 'update_password'
-    end
-  end
+  # resource :user, only: [:edit] do
+  #   collection do
+  #     patch 'update_password'
+  #   end
+  # end
 
-  get '/users/update_password', to: 'users#update_password'
+  get '/users/update_password/:id', to: 'users#update_password', as: 'update_password'
 
-  resources :users
-  resources :dispatched_emails
-  resources :portfolio_items
-  resources :dashboard
+  resources :users, :dispatched_emails, :portfolio_items, :dashboard
 
 end

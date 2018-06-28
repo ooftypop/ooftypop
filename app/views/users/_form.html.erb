@@ -5,32 +5,32 @@
     <div class="edit-user-form">
       <%= form_for(@user, controller: 'users') do |f| %>
 
-        <div class="field edit-fields ">
+        <div class="field edit-fields">
           <%= f.label :first_name %><br />
           <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", id: "edit-user-first-name" %>
         </div><br />
 
-        <div class="field edit-fields ">
+        <div class="field edit-fields">
           <%= f.label :middle_name %><br />
           <%= f.text_field :middle_name, autofocus: true, autocomplete: "middle_name", id: "edit-user-middle-name" %>
         </div><br />
 
-        <div class="field edit-fields ">
+        <div class="field edit-fields">
           <%= f.label :last_name %><br />
           <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", id: "edit-user-last-name" %>
         </div><br />
 
-        <div class="field edit-fields ">
+        <div class="field edit-fields">
           <%= f.label :new_email %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email", id: "edit-user-email" %>
         </div><br /><br />
 
-        <div class="actions edit-fields ">
+        <div class="actions edit-fields">
           <%= f.submit "Update", id: "user-edit-submit" %>
         </div>
       <% end %>
     </div><br />
     <%= link_to "Back", :back %>
-    <%= link_to "Update Password", update_password_user_path(@user) %>
+    <%= link_to "Update Password", update_password_path(id: @user.id) %>
   </div>
 </div>

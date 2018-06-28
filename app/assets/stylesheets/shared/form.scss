@@ -66,6 +66,28 @@
     }
   }
 }
+////////////////////////////////////////////////////////////UPDATE PASSWORD FORM
+.background-container {
+  .new-password-container {
+    border: solid black 3px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    .new-password-form {
+      .new-password {
+        #new-password-field {
+          width: 300px;
+        }
+        #submit-new-password {
+          font-weight: bold;
+          height: 28px;
+        }
+      }
+    }
+  }
+}
 /////////////////////////////////////////////////////////////////////LOGIN MEDIA
 @media (max-width: 520px) {
   .background-container {

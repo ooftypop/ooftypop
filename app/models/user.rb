@@ -5,10 +5,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
 
   rolify
-  devise :database_authenticatable,
-         :recoverable, :rememberable, :trackable, :validatable
 
-  validates :email, :password, presence: true
+  # validates :email, :password, presence: true
 
   after_create :default_role
 
