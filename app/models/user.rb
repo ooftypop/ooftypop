@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   include SnoopDogg
 
+  has_many :projects
+
   rolify
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
