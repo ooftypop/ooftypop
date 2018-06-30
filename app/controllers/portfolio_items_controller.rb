@@ -42,6 +42,7 @@ class PortfolioItemsController < ApplicationController
     params.require(:portfolio_item).permit(
       :description
       :id,
+      :published,
       :title,
       :url)
   end
