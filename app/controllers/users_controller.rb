@@ -45,6 +45,7 @@ class UsersController < ApplicationController
       :id,
       :last_name,
       :middle_name,
-      :password)
+      :password,
+      :phone_number)
   end
 end
