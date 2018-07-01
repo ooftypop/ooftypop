@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
 
+  before_action :set_project, except: [:index]
+
   def index
     @projects = Project.all
   end
@@ -37,6 +39,7 @@ class ProjectsController < ApplicationController
 
   def project_params
     params.require(:project).permit(
+      :user_id,
       :title)
 
   end

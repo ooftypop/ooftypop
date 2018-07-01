@@ -1,0 +1,14 @@
+<div>
+  <% if @project.any? %>
+    <% @project.each do |project| %>
+      <div class="project-container">
+        <div class="container">
+          <h3 class="project-title"><%= project.title %></h3>
+            <p class="container">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis lectus in ante mattis venenatis in iaculis massa. In molestie nisi ut posuere dictum. Suspendisse ac lobortis metus, ut sagittis sapien. Maecenas sagittis nisl et augue varius pulvinar. Maecenas eu nibh ac neque tempor bibendum nec vel mauris. Vestibulum sed leo malesuada, semper sem quis, gravida sapien. Pellentesque ac erat convallis, tincidunt est vitae, euismod augue. In nec diam posuere massa tempus finibus. Nulla sit amet bibendum elit, sed pharetra ipsum. Suspendisse vel placerat tortor. Vestibulum lorem nunc, vehicula non tincidunt in, vehicula at mi. Vivamus in laoreet sapien, a vehicula arcu. Fusce vel laoreet est.
+            </p>
+          </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

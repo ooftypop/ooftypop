@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :portfolio_items
   resources :dashboard
 
+  resources :projects
+
 end

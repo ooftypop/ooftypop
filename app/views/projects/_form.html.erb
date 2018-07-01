@@ -1,3 +1,22 @@
 <div>
-  Form/projects
+  <div id="projectForm">
+    <div class="form-container">
+      <%= form_for @project, remote: true do |f| %>
+
+        <div>
+          <%= f.text_field :title,
+            placeholder: "Project Title",
+            class: "form-control" %>
+        </div>
+
+        <div class="submit-button">
+          <%= f.submit "Commission",
+            class: "submit-clicker btn btn-primary" %>
+        </div>
+
+        <button class="btn btn-link cancel">Cancel</button>
+
+      <% end %>
+    </div>
+  </div>
 </div>
