@@ -1,0 +1,12 @@
+<div>
+  <div class="container">
+    <% if @projects.any? %>
+      <% @project.each do |project| %>
+        <div class="project-container">
+          <h3 class="project-title"><%= project.title %></h3>
+            <p class="card-link"></a></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

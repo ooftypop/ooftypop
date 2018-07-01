@@ -45,6 +45,7 @@ class UsersController < ApplicationController
       :id,
       :last_name,
       :middle_name,
-      :password)
+      :password,
+      projects_users: [:project_id])
   end
 end
