@@ -2,6 +2,7 @@
   <div id="projectForm">
     <div class="form-container">
       <%= form_for @project, remote: true do |f| %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
 
         <div>
           <%= f.text_field :title,

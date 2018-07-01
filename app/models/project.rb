@@ -1,6 +1,9 @@
 class Project < ApplicationRecord
 
-  has_many :users, through: :user_projects
+  has_many :projects_users
+  has_many :users, through: :projects_users
+
+  accepts_nested_attributes_for :projects_users
 
   validates :title, presence: true
 end
