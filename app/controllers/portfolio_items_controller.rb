@@ -22,7 +22,6 @@ class PortfolioItemsController < ApplicationController
   end
 
   def edit
-     @portfolio_item.snoop
   end
 
   def update
