@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
 
-  has_and_belongs_to_many :users, foreign_key: "user_id"
+  has_many :users, through: :user_projects
 
   validates :title, presence: true
 end

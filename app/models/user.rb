@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   include SnoopDogg
 
-  has_many :projects
+  has_many :projects, through: :user_projects
 
   rolify
   devise :database_authenticatable, :registerable,
