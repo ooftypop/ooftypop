@@ -1,26 +1,6 @@
 class UsersController < ApplicationController
-
   before_action :set_user, except: [:index]
   before_action :authenticate_user!
-
-  def index
-    @users = User.all
-  end
-
-  def show
-  end
-
-  def new
-  end
-
-  def create
-    @user.assign_attributes(user_params)
-    if @user.save
-      redirect_back fallback_location: root_path
-    else
-      render "new"
-    end
-  end
 
   def edit
   end
@@ -32,11 +12,6 @@ class UsersController < ApplicationController
       render "edit"
     end
   end
-
-  def destroy
-  end
-
-  # ============================================================================
 
   private
 
@@ -51,6 +26,7 @@ class UsersController < ApplicationController
       :last_name,
       :password,
       :password_confirmation,
-      :middle_name)
+      :middle_name
+    )
   end
 end
