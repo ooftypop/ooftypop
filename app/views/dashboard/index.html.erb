@@ -1,3 +1,10 @@
 <div class="container">
-  <%= render partial: "projects/display" %>
+  <% @project.each do |project| %>
+    <div class="project-container">
+      <div class="container">
+        <h3 class="project-title"><%= project.title %></h3>
+        </div>
+        <%= link_to "Project", project_path(project) %>
+    </div>
+  <% end %>
 </div>
