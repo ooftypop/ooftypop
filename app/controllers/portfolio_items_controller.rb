@@ -12,10 +12,6 @@ class PortfolioItemsController < ApplicationController
   def new
   end
 
-  def edit
-     @portfolio_item.snoop
-  end
-
   def create
     @portfolio_item.assign_attributes(portfolio_item_params)
     if @portfolio_item.save
@@ -23,6 +19,9 @@ class PortfolioItemsController < ApplicationController
     else
       render "new"
     end
+  end
+
+  def edit
   end
 
   def update
@@ -40,9 +39,10 @@ class PortfolioItemsController < ApplicationController
 
   def portfolio_item_params
     params.require(:portfolio_item).permit(
-      :description
+      :description,
       :id,
       :title,
-      :url)
+      :url
+    )
   end
 end

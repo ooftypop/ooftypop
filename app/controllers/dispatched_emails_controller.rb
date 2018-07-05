@@ -1,4 +1,5 @@
 class DispatchedEmailsController < ApplicationController
+
   before_action :set_dispatched_email, except: [:index]
 
   def index
@@ -6,12 +7,6 @@ class DispatchedEmailsController < ApplicationController
   end
 
   def show
-  end
-
-  def new
-  end
-
-  def edit
   end
 
   def create
@@ -22,11 +17,6 @@ class DispatchedEmailsController < ApplicationController
     else
       render "home#index"
     end
-  end
-
-  def update
-    DispatchedEmailMailer.inquire_confirmation(@dispatched_email).deliver_now
-    redirect_to root_path
   end
 
   def destroy

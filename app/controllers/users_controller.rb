@@ -1,35 +1,16 @@
 class UsersController < ApplicationController
-
   before_action :set_user, except: [:index]
-
-  def index
-    @users = User.all
-  end
-
-  def show
-  end
-
-  def new
-    @user = User.new
-  end
+  before_action :authenticate_user!
 
   def edit
   end
 
-  def create
-    @user.assign_attributes(user_params)
-    if @user.save
-      redirect_to root_path
-    else
-      render "new"
-    end
-  end
-
   def update
-    @user.update_attributes(user_params)
-  end
-
-  def destroy
+    if @user.update_attributes(user_params)
+      redirect_back fallback_location: root_path
+    else
+      render "edit"
+    end
   end
 
   private
@@ -42,10 +23,11 @@ class UsersController < ApplicationController
     params.require(:user).permit(
       :email,
       :first_name,
-      :id,
-      :last_name,
       :middle_name,
+      :last_name,
+      :phone_number,
       :password,
-      :phone_number)
+      :password_confirmation
+    )
   end
 end
