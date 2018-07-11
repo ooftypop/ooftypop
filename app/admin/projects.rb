@@ -14,4 +14,10 @@ permit_params :title
     end
     f.actions
   end
+
+  show do
+    attributes_table do
+      row :title
+    end
+  end
 end

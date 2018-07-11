@@ -20,4 +20,12 @@ permit_params :description, :title, :url
     end
     f.actions
   end
+
+  show do
+    attributes_table do
+      row :title
+      row :description
+      row :url
+    end
+  end
 end
