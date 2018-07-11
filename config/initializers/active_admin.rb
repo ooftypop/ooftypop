@@ -68,6 +68,8 @@ ActiveAdmin.setup do |config|
   # the name of default policy class. This policy will be used in every
   # case when Pundit is unable to find suitable policy.
   # config.pundit_default_policy = "MyDefaultPunditPolicy"
+  config.authorization_adapter = ActiveAdmin::PunditAdapter
+  config.pundit_default_policy = "ApplicationPolicy"
 
   # You can customize your CanCan Ability class name here.
   # config.cancan_ability_class = "Ability"
@@ -77,7 +79,7 @@ ActiveAdmin.setup do |config|
   # because, by default, user gets redirected to Dashboard. If user
   # doesn't have access to Dashboard, he'll end up in a redirect loop.
   # Method provided here should be defined in application_controller.rb.
-  # config.on_unauthorized_access = :access_denied
+  config.on_unauthorized_access = :user_not_authorized
 
   # == Current User
   #
