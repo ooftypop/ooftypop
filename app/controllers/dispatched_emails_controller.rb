@@ -2,11 +2,7 @@ class DispatchedEmailsController < ApplicationController
 
   before_action :set_dispatched_email, except: [:index]
 
-  def index
-    @dispatched_emails = DispatchedEmail.all
-  end
-
-  def show
+  def new
   end
 
   def create
@@ -17,9 +13,6 @@ class DispatchedEmailsController < ApplicationController
     else
       render "home#index"
     end
-  end
-
-  def destroy
   end
 
   private
