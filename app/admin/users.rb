@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  permit_params :email, :first_name, :last_name, :middle_name, role_ids: []
+  permit_params :email, :first_name, :last_name, :middle_name, :password, :password_confirmation, role_ids: []
 
   index do
     selectable_column
@@ -26,6 +26,8 @@ ActiveAdmin.register User do
       f.input :middle_name
       f.input :last_name
       f.input :email
+      f.input :password
+      f.input :password_confirmation
       f.input :roles, as: :check_boxes, multiple: true, collection: Role.all
     end
     f.actions
