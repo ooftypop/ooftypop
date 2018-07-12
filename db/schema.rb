@@ -67,11 +67,6 @@ ActiveRecord::Schema.define(version: 2018_07_05_160042) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "projects_users", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "project_id"
-  end
-
   create_table "roles", id: :serial, force: :cascade do |t|
     t.string "name"
     t.string "resource_type"
