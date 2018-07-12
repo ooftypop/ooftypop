@@ -93,6 +93,8 @@
 @media (max-width: 766px) {
   .home-page {
     .works-container {
+      height: 500px;
+      overflow: scroll;
       .card-columns {
         column-count: 2;
       }
