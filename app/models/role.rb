@@ -21,4 +21,8 @@ class Role < ApplicationRecord
       v.save if self.where(name: v.name).empty?
     end
   end
+
+  def self.roles
+    Role.select(:role).map(&:role).uniq
+  end
 end
