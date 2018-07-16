@@ -1,7 +1,7 @@
 .home-page {
   padding: 0 !important;
   .banner-container {
-    background-image: url(/assets/canyon-fade.png);
+    background-image: url(asset_path('canyon-fade.png'));
     background-size: cover;
     background-repeat: no-repeat;
     height: 700px;

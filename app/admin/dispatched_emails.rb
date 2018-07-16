@@ -28,4 +28,14 @@ ActiveAdmin.register DispatchedEmail do
     end
     f.actions
   end
+
+  show do
+    attributes_table do
+      row :sender_name
+      row :sender_email
+      row :sender_phone_number
+      row :budget
+      row :body
+    end
+  end
 end
