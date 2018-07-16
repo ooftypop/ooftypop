@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   rolify
-  devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
+  devise :invitable, :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
 
   after_create :default_role
 
