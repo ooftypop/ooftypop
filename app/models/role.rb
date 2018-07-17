@@ -3,6 +3,8 @@ class Role < ApplicationRecord
 
   has_and_belongs_to_many :users, :join_table => :users_roles
 
+  belongs_to :resource, :polymorphic => true
+
   scopify
 
 # ===========================================================================================================================================================
@@ -10,9 +12,12 @@ class Role < ApplicationRecord
 # ===========================================================================================================================================================
   def self.build_roles
    	{
-      admin:     Role.new(name: "admin"),
-      client:    Role.new(name: "client"),
-      developer: Role.new(name: "developer")
+      admin:          Role.new(name: "admin"),
+      client:         Role.new(name: "client"),
+      developer:      Role.new(name: "developer"),
+      lead_developer: Role.new(name: "lead_developer"),
+      jr_developer:   Role.new(name: "jr_developer"),
+      manager:        Role.new(name: "manager")
     }
   end
 
