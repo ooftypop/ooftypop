@@ -95,6 +95,15 @@
         }
       }
     }
+    .password-footer-links {
+      margin-bottom: 10px;
+      .back-left {
+        float: left;
+      }
+      .profile-edit-link {
+        float: right;
+      }
+    }
   }
 }
 /////////////////////////////////////////////////////////////////////LOGIN MEDIA
