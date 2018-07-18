@@ -64,6 +64,15 @@
         }
       }
     }
+    .form-footer-links {
+      margin-bottom: 10px;
+      .back-left {
+        float: left;
+      }
+      .password-right {
+        float: right;
+      }
+    }
   }
 }
 ////////////////////////////////////////////////////////////UPDATE PASSWORD FORM

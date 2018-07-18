@@ -30,7 +30,9 @@
         </div>
       <% end %>
     </div><br />
-    <%= link_to "Back", :back %>
-    <%= link_to "Update Password", update_password_path(id: @user.id) %>
+    <div class="form-footer-links">
+      <%= link_to "Back", user_path(current_user), class: "back-left" %>
+      <%= link_to "Update Password", update_password_path(id: @user.id), class: "password-right" %>
+    </div>
   </div>
 </div>
