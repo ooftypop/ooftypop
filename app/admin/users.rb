@@ -5,12 +5,9 @@ ActiveAdmin.register User do
     selectable_column
     id_column
     column :first_name
-    column :middle_name
     column :last_name
     column :email
     column :current_sign_in_at
-    column :sign_in_count
-    column :created_at
     column :roles do |user|
       user.roles.collect {|c| c.name.capitalize }.to_sentence
     end
@@ -63,6 +60,8 @@ ActiveAdmin.register User do
       row :roles do |user|
         user.roles.collect {|c| c.name.capitalize }.to_sentence
       end
+      row :created_at
+      row :sign_in_count
     end
   end
 
