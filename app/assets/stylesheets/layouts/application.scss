@@ -9,9 +9,9 @@ html {
 }
 
 .alert-alert {
-  @extend .alert-danger;
+  @extend .alert-danger !optional;
 }
 
 .alert-notice {
-  @extend .alert-warning;
+  @extend .alert-warning !optional;
 }
