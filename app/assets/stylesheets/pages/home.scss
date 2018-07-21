@@ -1,15 +1,11 @@
 .home-page {
   padding: 0 !important;
   .banner-container {
-    background-image: url(asset_path('canyon-fade.png'));
+    background: url(asset_path('canyon-fade.png'));
     background-size: cover;
     background-repeat: no-repeat;
     height: 700px;
     margin: 0;
-    // img {
-    //   padding: 0px 0px 120px 0px;
-    //   width: 100%;
-    // }
   }
   .services-container {
     background-color: black;
