@@ -12530,13 +12530,25 @@ button.close {
   clip: auto;
 }
 
+/* line 1, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/application.scss */
+html {
+  height: 100%;
+}
+/* line 3, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/application.scss */
+html body {
+  font-family: Playfair display;
+  height: 100%;
+  margin-top: 50px;
+  position: relative;
+}
+
 /* line 1, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/pages/home.scss */
 .home-page {
   padding: 0 !important;
 }
 /* line 3, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/pages/home.scss */
 .home-page .banner-container {
-  background-image: url(/assets/canyon-fade.png);
+  background-image: url("/assets/canyon-fade-37f1976432ca041b0c3c9b99f5ef697e8b670519cfcc1cfb6696954ca2cd3b87.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 700px;
@@ -12631,37 +12643,54 @@ button.close {
 /* line 84, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/pages/home.scss */
 .inquiry-received {
   height: 464px;
-}
-/* line 86, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/pages/home.scss */
-.inquiry-received .thank-you-text {
-  color: white;
-  width: 50%;
   text-align: center;
 }
+/* line 87, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/pages/home.scss */
+.inquiry-received .thank-you-text {
+  color: #e5e5e5;
+  margin-top: 200px;
+}
 
-/* line 1, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+@media (max-width: 766px) {
+  /* line 95, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/pages/home.scss */
+  .home-page .works-container {
+    height: 500px;
+    overflow: scroll;
+  }
+  /* line 98, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/pages/home.scss */
+  .home-page .works-container .card-columns {
+    column-count: 2;
+  }
+}
+@media (max-width: 530px) {
+  /* line 107, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/pages/home.scss */
+  .home-page .works-container .card-columns {
+    column-count: 1;
+  }
+}
+/* line 2, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
 .form-container {
   position: relative;
 }
-/* line 3, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+/* line 4, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
 .form-container .sender-first, .form-container .sender-last {
   text-align: center;
   display: inline;
   float: left;
 }
 
-/* line 9, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+/* line 10, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
 .submit-buttom {
   text-align: center;
 }
-/* line 11, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+/* line 12, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
 .submit-buttom .submit-clicker {
   background-color: white;
   border-radius: 0;
   color: black;
 }
 
-/* line 17, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+/* line 18, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
 .form-control:nth-child(-n+2) {
   border-radius: 0;
   height: 40px;
@@ -12669,35 +12698,170 @@ button.close {
   margin-bottom: 20px;
 }
 
-/* line 1, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
+/* line 25, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container {
+  text-align: center;
+}
+/* line 27, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .signin-container {
+  border: solid black 3px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 500px;
+}
+/* line 36, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .signin-container .signin-form .signin-fields #sessions-email, .background-container .signin-container .signin-form .signin-fields #sessions-password, .background-container .signin-container .signin-form .signin-fields #sessions-submit {
+  width: 300px;
+}
+/* line 39, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .signin-container .signin-form .signin-fields #sessions-submit {
+  font-weight: bold;
+  height: 28px;
+}
+
+/* line 49, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .user-edit-container {
+  border: solid black 3px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 500px;
+}
+/* line 58, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .user-edit-container .edit-user-form .edit-fields #edit-user-email, .background-container .user-edit-container .edit-user-form .edit-fields #user-edit-submit, .background-container .user-edit-container .edit-user-form .edit-fields #edit-user-first-name, .background-container .user-edit-container .edit-user-form .edit-fields #edit-user-middle-name, .background-container .user-edit-container .edit-user-form .edit-fields #edit-user-last-name {
+  width: 300px;
+}
+/* line 61, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .user-edit-container .edit-user-form .edit-fields #user-edit-submit {
+  font-weight: bold;
+  height: 28px;
+}
+/* line 67, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .user-edit-container .form-footer-links {
+  margin-bottom: 10px;
+}
+/* line 69, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .user-edit-container .form-footer-links .back-left {
+  float: left;
+}
+/* line 72, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .user-edit-container .form-footer-links .password-right {
+  float: right;
+}
+
+/* line 80, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .new-password-container {
+  border: solid black 3px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 500px;
+}
+/* line 89, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .new-password-container .new-password-form .new-password #new-password-field {
+  width: 300px;
+}
+/* line 92, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .new-password-container .new-password-form .new-password #submit-new-password {
+  font-weight: bold;
+  height: 28px;
+}
+/* line 98, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .new-password-container .password-footer-links {
+  margin-bottom: 10px;
+}
+/* line 100, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .new-password-container .password-footer-links .back-left {
+  float: left;
+}
+/* line 103, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+.background-container .new-password-container .password-footer-links .profile-edit-link {
+  float: right;
+}
+
+@media (max-width: 520px) {
+  /* line 111, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+  .background-container {
+    margin: 20px;
+  }
+  /* line 113, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+  .background-container .signin-container {
+    width: 100%;
+  }
+  /* line 117, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+  .background-container .signin-container .signin-form .signin-fields #sessions-email, .background-container .signin-container .signin-form .signin-fields #sessions-password, .background-container .signin-container .signin-form .signin-fields #sessions-submit {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+  /* line 122, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/shared/form.scss */
+  .background-container .signin-container .signin-form .signin-fields #sessions-submit {
+    font-weight: bold;
+    height: 28px;
+  }
+}
+/* line 2, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
 .navbar {
   background-color: #f7f7f9;
   font-family: Playfair display, serif;
   width: 100%;
 }
-/* line 5, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
+/* line 6, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
 .navbar .navbar-brand {
   color: black;
   font-weight: bold;
   padding-bottom: 5px;
 }
-/* line 10, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
+/* line 11, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
+.navbar .home-link, .navbar .dash-link, .navbar .destroy-link, .navbar .edit-link {
+  color: grey;
+}
+/* line 14, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
 .navbar .portfolio-link {
   color: grey;
   float: right;
   margin: 15px 0px 0px 0px;
 }
-/* line 15, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
+/* line 19, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
 .navbar ul {
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
 }
-/* line 19, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
+/* line 23, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
 .navbar ul .nav-item {
   float: left;
 }
-/* line 21, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
+/* line 25, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
 .navbar ul .nav-item .nav-link {
   color: grey;
+}
+
+/* line 32, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
+.profile-dropdown {
+  background-color: #f7f7f9;
+  float: right;
+  margin-top: 6px;
+}
+/* line 36, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
+.profile-dropdown button {
+  background-color: #f7f7f9;
+  color: grey;
+}
+/* line 39, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
+.profile-dropdown button a {
+  font-size: 24px;
+  text-decoration: none;
+}
+/* line 44, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
+.profile-dropdown .fa {
+  color: grey;
+}
+/* line 47, /Users/paulstorberg/projects/ooftypop/app/assets/stylesheets/layouts/navbar.scss */
+.profile-dropdown .dropdown-menu {
+  text-align: center;
 }
