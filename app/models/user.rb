@@ -5,6 +5,9 @@ class User < ApplicationRecord
   rolify
   devise :invitable, :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :user_roles
+  has_many :projects, through: :user_role
+
   after_create :default_role
 
 # ===========================================================================================================================================================
