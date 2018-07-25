@@ -1,8 +1,6 @@
 class Project < ApplicationRecord
+  include SnoopDogg
   resourcify
-
-  has_many :user_roles
-  has_many :users, through: :user_role
 
   validates :title, presence: true
 
