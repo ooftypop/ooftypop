@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes(user_params)
-      sign_in :user, @user, bypass: true
+      bypass_sign_in(@user) if params[:user][:password].present?
       flash[:notice] = 'Account Updated'
       redirect_back fallback_location: root_path
     else
