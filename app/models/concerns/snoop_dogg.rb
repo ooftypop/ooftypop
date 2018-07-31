@@ -3,20 +3,41 @@ module SnoopDogg
   private
 
   included do
-    def snoop
-      self.puts_attributes
-    end
-    
-    def puts_attributes(include_type = false)
-      puts "=" * 88,
+    def snoop *args
+      puts "=" * 89,
            "#{self.class.name} #{self.id}",
-           "=" * 88
+           "=" * 89
       self.attributes.sort.each do |k,v|
-        row = "#{k}: #{v}"
-        row = row + " (#{v.class.name})" if include_type
-        puts row
+        puts "#{k}: #{paint(v)}"
       end
-      puts "=" * 88
+      if args.any?
+        args.each do |arg|
+          self.send(arg).each {|child| child.snoop } rescue self.send(arg).snoop
+        end
+      else
+        puts "=" * 89
+      end
+    end
+
+    def self.snoop
+      self.new.snoop
+    end
+  end
+
+  def paint(v)
+    case v.class.to_s
+    when "ActiveSupport::TimeWithZone", "Date", "Time", "DateTime"
+      "\e[#{32}m#{v}\e[0m"
+    when "Fixnum"
+      "\e[#{34}m#{v}\e[0m"
+    when "NilClass"
+      "\e[#{31}m#{'nil'}\e[0m"
+    when "String"
+      "\e[#{33}m#{v}\e[0m"
+    when "FalseClass", "TrueClass"
+      "\e[#{32}m#{v}\e[0m"
+    else
+      "\e[#{35}m#{v}\e[0m"
     end
   end
 end

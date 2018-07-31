@@ -1,7 +1,10 @@
 class Role < ApplicationRecord
   include SnoopDogg
 
+  belongs_to :project, foreign_key: "resource_id"
+
   has_many :users_roles
+
   has_and_belongs_to_many :users, :join_table => :users_roles
 
   scopify

@@ -5,11 +5,9 @@ class User < ApplicationRecord
 
   devise :invitable, :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :users_roles
-
-  has_many :projects, through: :user_roles
-  
   has_and_belongs_to_many :roles, :join_table => :users_roles
+
+  has_many :projects, through: :roles, foreign_key: "resource_id"
 
   after_create :default_role
 
