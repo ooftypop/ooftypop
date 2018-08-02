@@ -1,0 +1,14 @@
+<h3>Developers</h3>
+
+<fieldset>
+  <table style='width: 50%'>
+    <tr>
+      <td><%= u.select :users, User.all.map {|user| [user.first_name, user.id] } %></td>
+    </tr>
+    <tr>
+      <td><%= u.select :roles, Role.all.map {|c| c.name.capitalize } %></td>
+    </tr>
+    <%= link_to_remove_association "remove tag", f %>
+    <% end %>
+  </table>
+</fieldset>

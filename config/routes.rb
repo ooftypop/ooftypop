@@ -15,6 +15,6 @@ Rails.application.routes.draw do
 
   get '/users/update_password/:id', to: 'users#update_password', as: 'update_password'
 
-  resources :users, :dispatched_emails, :portfolio_items, :dashboard
+  resources :users, :dispatched_emails, :portfolio_items, :dashboard, :projects
 
 end

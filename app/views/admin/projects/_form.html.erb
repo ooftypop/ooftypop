@@ -1,0 +1,17 @@
+<h2>Project</h2>
+
+<%= form_for @project do |f| %>
+  <div class='projects-admin-form'>
+    <table style='width: 50%'>
+      <tr>
+        <td><%= f.text_field :title, placeholder: 'Project Title' %></td>
+      </tr>
+    </table>
+    <h3>Developers</h3>
+    <%= f.fields_for :users_roles, @project.users_roles do |users| %>
+      <%= render 'project_developers', :f => users %>
+    <% end %>
+    <%= link_to_add_association 'Add Developer', f, :users_roles %>
+  </div>
+  <%= f.submit  "Submit" %>
+<% end %>

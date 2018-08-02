@@ -15,4 +15,5 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require smart_listing
+//= require cocoon
 //= require_tree
