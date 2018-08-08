@@ -11,9 +11,10 @@ class UsersController < ApplicationController
   def update
     if @user.update_attributes(user_params)
       bypass_sign_in(@user) if params[:user][:password].present?
-      flash[:notice] = 'Account Updated'
+      flash_message("success")
       redirect_back fallback_location: root_path
     else
+      flash_message("alert")
       render "edit"
     end
   end

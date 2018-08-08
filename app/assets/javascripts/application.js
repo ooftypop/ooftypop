@@ -16,3 +16,4 @@
 //= require turbolinks
 //= require smart_listing
 //= require_tree
+//= require alerts
