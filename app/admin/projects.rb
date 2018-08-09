@@ -11,6 +11,7 @@ permit_params :title
   form do |f|
     f.inputs do
       f.input :title
+      f.attachment_field :images_files, multiple: true, presigned: true, direct: true
     end
     f.actions
   end
